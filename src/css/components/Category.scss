@@ -1,0 +1,30 @@
+.Category {
+  display: inline-block;
+  opacity: 0.5;
+  &--selectable {
+    cursor: pointer;
+  }
+  &.is-selected {
+    opacity: 1;
+  }
+  .label {
+    border-radius: 10px;
+    font-size: 0.7em;
+    font-weight: normal;
+
+    input {
+      display: inline-block;
+      margin-right: 2px;
+      vertical-align: sub;
+    }
+  }
+  @each $category in $categories {
+    $i: index($categories, $category);
+    $color: nth($categoryColors, $i);
+    &--#{$category} {
+      .label.label-default {
+        background-color: $color;
+      }
+    }
+  }
+}

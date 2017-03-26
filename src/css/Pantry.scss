@@ -1,0 +1,40 @@
+@import 'Variables.scss';
+
+@import "components/Header";
+@import "components/Filter";
+@import "components/Showcase";
+@import "components/Category";
+
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  font-size: 1rem;
+  background: #ccc;
+}
+
+.Pantry {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.Showcase__Item-enter {
+  opacity: 0.01;
+  transition: opacity 0.5s ease-in;
+}
+
+.Showcase__Item-enter.Showcase__Item-enter-active {
+  opacity: 1;
+}
+
+.Showcase__Item-leave {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+
+.Showcase__Item-leave.Showcase__Item-leave-active {
+  opacity: 0.01;
+}

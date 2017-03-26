@@ -1,0 +1,112 @@
+.Filter .Category {
+  margin: 0 0.5em;
+  font-size: 1.2em; }
+
+.Showcase ul li {
+  max-width: 24%; }
+
+.Showcase__Item {
+  background: #fff;
+  margin-bottom: 1.7em;
+  transition: box-shadow 0.5s; }
+  .Showcase__Item:hover {
+    box-shadow: 5px 5px 5px #aaa; }
+    .Showcase__Item:hover .Showcase__Item__image__container {
+      transform: scale(1.2); }
+  .Showcase__Item__container {
+    padding: 1em; }
+    .Showcase__Item__container h2 {
+      font-size: 1em;
+      text-transform: capitalize;
+      padding: 0;
+      margin: 0;
+      display: inline-block; }
+    .Showcase__Item__container .Category {
+      float: right; }
+    .Showcase__Item__container p {
+      margin-top: 1em;
+      font-size: 0.7em; }
+  .Showcase__Item__image {
+    height: 200px;
+    width: 100%;
+    overflow: hidden; }
+    .Showcase__Item__image__container {
+      width: 100%;
+      height: 100%;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: transform 1s; }
+  .Showcase__Item__actions {
+    padding: 0 1em 1em 1em; }
+    .Showcase__Item__actions a {
+      color: #000;
+      font-size: 0.8em; }
+      .Showcase__Item__actions a span.chevron {
+        margin-right: 0.5em; }
+        .Showcase__Item__actions a span.chevron:before {
+          border-style: solid;
+          border-width: 2px 2px 0 0;
+          content: '';
+          display: inline-block;
+          height: 0.6em;
+          position: relative;
+          top: -0.1em;
+          vertical-align: middle;
+          width: 0.6em;
+          left: -0.2em;
+          transform: rotate(45deg); }
+        .Showcase__Item__actions a span.chevron--fruit:before {
+          border-color: #ff8c00; }
+        .Showcase__Item__actions a span.chevron--meat:before {
+          border-color: #f80000; }
+        .Showcase__Item__actions a span.chevron--vegetable:before {
+          border-color: #009930; }
+
+.Category {
+  display: inline-block;
+  opacity: 0.5; }
+  .Category--selectable {
+    cursor: pointer; }
+  .Category.is-selected {
+    opacity: 1; }
+  .Category .label {
+    border-radius: 10px;
+    font-size: 0.7em;
+    font-weight: normal; }
+    .Category .label input {
+      display: inline-block;
+      margin-right: 2px;
+      vertical-align: sub; }
+  .Category--fruit .label.label-default {
+    background-color: #ff8c00; }
+  .Category--meat .label.label-default {
+    background-color: #f80000; }
+  .Category--vegetable .label.label-default {
+    background-color: #009930; }
+
+:root {
+  font-size: 16px; }
+
+body {
+  font-size: 1rem;
+  background: #ccc; }
+
+.Pantry {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto; }
+
+.Showcase__Item-enter {
+  opacity: 0.01;
+  transition: opacity 0.5s ease-in; }
+
+.Showcase__Item-enter.Showcase__Item-enter-active {
+  opacity: 1; }
+
+.Showcase__Item-leave {
+  opacity: 1;
+  transition: opacity 0.5s ease-in; }
+
+.Showcase__Item-leave.Showcase__Item-leave-active {
+  opacity: 0.01; }
